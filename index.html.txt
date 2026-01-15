@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basit Fayyaz | Flutter Developer</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; color: #333; }
+    header { background: #0a73ff; color: white; padding: 40px 20px; text-align: center; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #0a73ff; margin-bottom: 10px; }
+    .card { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    footer { background: #222; color: #aaa; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Basit Fayyaz</h1>
+  <p>Flutter Developer | UI/UX Focused</p>
+  <p>Lahore, Pakistan · Basitfayyaz44@gmail.com · +92 322 5079898</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I am a Flutter Developer with hands-on industry experience in building responsive, user-friendly mobile applications. I have worked on real-world projects involving REST APIs, JSON parsing, and clean UI/UX implementation. I enjoy problem-solving and continuously learning new technologies.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Flutter Developer – Dialtap Tech</h3>
+    <p><strong>Duration:</strong> 1 Year</p>
+    <ul>
+      <li>Developed Flutter apps with clean architecture and responsive UI.</li>
+      <li>Integrated REST APIs and managed dynamic data.</li>
+      <li>Worked closely with designers and backend teams.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Flutter Developer – Palmgrid</h3>
+    <p><strong>Duration:</strong> 3 Months Internship + 6 Months Job</p>
+    <ul>
+      <li>Started as Flutter intern and promoted to junior Flutter developer.</li>
+      <li>Built reusable UI components and screens.</li>
+      <li>Used Git for version control and team collaboration.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="card">
+    <p>Flutter, Dart, REST APIs, JSON, UI/UX Design, Responsive Layouts, Git, Clean Code, OOP</p>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="card">
+    <ul>
+      <li>E-Commerce App UI (Flutter)</li>
+      <li>Social App UI</li>
+      <li>REST API Demo App</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Basit Fayyaz | Flutter Developer</p>
+</footer>
+
+</body>
+</html>
