@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#F8F8F8" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0E0E0E" media="(prefers-color-scheme: dark)" />
+<meta name="color-scheme" content="light dark" />
+
+<title>Basit Fayyaz — Full-stack engineer building production web apps</title>
+<meta name="description" content="Full-stack engineer (Next.js, TypeScript, Postgres) shipping production web apps, programmatic SEO, and AI-assisted ops platforms. Based in Lahore, available for new roles." />
+<meta name="author" content="Basit Fayyaz" />
+<link rel="canonical" href="https://basitfayyaz.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Basit Fayyaz — Full-stack engineer" />
+<meta property="og:description" content="Production web apps with Next.js, TypeScript, and Postgres. Programmatic SEO, real-time ops, AI integrations." />
+<meta property="og:url" content="https://basitfayyaz.com/" />
+<meta property="og:image" content="https://basitfayyaz.com/og.png" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@basitfayyaz" />
+<meta name="twitter:title" content="Basit Fayyaz — Full-stack engineer" />
+<meta name="twitter:description" content="Production web apps with Next.js, TypeScript, and Postgres." />
+<meta name="twitter:image" content="https://basitfayyaz.com/og.png" />
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter,system-ui,sans-serif' font-size='34' font-weight='800' fill='%23F8F8F8'%3Eb%3C/text%3E%3Ccircle cx='50' cy='48' r='3.2' fill='%23E0FF4F'/%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Inter,system-ui,sans-serif' font-size='34' font-weight='800' fill='%23F8F8F8'%3Eb%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Basit Fayyaz",
+  "url": "https://basitfayyaz.com/",
+  "jobTitle": "Full-stack Software Engineer",
+  "description": "Full-stack engineer building production web apps with Next.js, TypeScript and Postgres.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lahore",
+    "addressCountry": "PK"
+  },
+  "email": "mailto:basitfayyaz44@gmail.com",
+  "sameAs": [
+    "https://twitter.com/basitfayyaz",
+    "https://linkedin.com/in/basitfayyaz",
+    "https://github.com/basitfayyaz"
+  ],
+  "knowsAbout": ["Next.js", "TypeScript", "PostgreSQL", "Programmatic SEO", "Chrome Extensions", "AI integration"]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #F8F8F8;
+    --card: #FFFFFF;
+    --primary: #111111;
+    --secondary: #6B6B6B;
+    --tertiary: #A8A8A8;
+    --border: #ECECEC;
+    --border-strong: #D8D8D8;
+    --accent: #1B5E20;        /* deep, restrained green */
+    --accent-soft: #E8F1E9;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --shadow-sm: 0 1px 0 rgba(17,17,17,0.04);
+    --shadow-md: 0 8px 24px rgba(17,17,17,0.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  html:focus-within { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--primary);
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--primary); color: var(--card); }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    z-index: 100;
+    background: var(--primary);
+    color: var(--card);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .skip-link:focus { left: 16px; }
+
+  /* Scroll progress */
+  .scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--primary);
+    z-index: 50;
+    transition: width 0.05s linear;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Nav */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(248, 248, 248, 0.82);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  nav.scrolled {
+    border-bottom-color: var(--border);
+    background: rgba(248, 248, 248, 0.92);
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+  .mark {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .mark::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    align-items: center;
+  }
+  .nav-links a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    position: relative;
+    padding: 6px 2px;
+  }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-links a.active { color: var(--primary); }
+  .nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--primary);
+  }
+  .nav-cta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--primary);
+    color: var(--card);
+    padding: 9px 16px;
+    border-radius: 999px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-cta:hover { transform: translateY(-1px); background: #000; }
+
+  /* Hero */
+  .hero {
+    padding: 90px 0 60px;
+    position: relative;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--secondary);
+  }
+  .hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(72px, 12vw, 170px);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    color: var(--primary);
+  }
+  .hero h1 .last {
+    font-weight: 300;
+    color: var(--primary);
+  }
+  .hero h1 .dot {
+    display: inline-block;
+    color: var(--accent);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-top: 56px;
+  }
+  .hero-bio {
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--primary);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    max-width: 540px;
+  }
+  .hero-bio em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--primary);
+    color: var(--card);
+  }
+  .btn-primary:hover { transform: translateY(-2px); background: #000; box-shadow: var(--shadow-md); }
+  .btn-secondary {
+    background: var(--card);
+    color: var(--primary);
+    border-color: var(--border-strong);
+  }
+  .btn-secondary:hover { transform: translateY(-2px); border-color: var(--primary); }
+  .btn .ico { font-size: 11px; }
+
+  .status-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 6px 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    gap: 16px;
+  }
+  .status-row:last-child { border-bottom: none; }
+  .status-row .label {
+    color: var(--secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .status-row .value {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 500;
+    text-align: right;
+  }
+  .status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 8px;
+    vertical-align: middle;
+    animation: pulse 2.4s ease-in-out infinite;
+    box-shadow: 0 0 0 0 rgba(27,94,32,0.45);
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(27,94,32,0.45); }
+    50% { opacity: 0.55; box-shadow: 0 0 0 6px rgba(27,94,32,0); }
+  }
+
+  /* Section headers */
+  section { padding: 70px 0; scroll-margin-top: 80px; }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .section-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--primary);
+    letter-spacing: 0.06em;
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 5.2vw, 64px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    color: var(--primary);
+    margin-bottom: 56px;
+    max-width: 820px;
+  }
+  .section-title em {
+    font-style: normal;
+    font-weight: 300;
+    color: var(--secondary);
+  }
+
+  /* Work */
+  .project {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px 44px;
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 48px;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  .project-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--secondary);
+    text-transform: uppercase;
+    line-height: 1.9;
+    padding-top: 6px;
+  }
+  .project-meta .year {
+    color: var(--primary);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .project-meta .status-pill {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.06em;
+  }
+  .project-body h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 6px;
+  }
+  .project-body h3 a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .project-body h3 a:hover { opacity: 0.65; }
+  .project-body h3 a .arrow {
+    font-size: 0.6em;
+    color: var(--secondary);
+    transition: transform 0.25s ease, color 0.2s ease;
+    display: inline-block;
+  }
+  .project-body h3 a:hover .arrow {
+    transform: translate(2px, -2px);
+    color: var(--accent);
+  }
+  .project-role {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+  .project-body p {
+    font-size: 15px;
+    color: var(--secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    max-width: 640px;
+  }
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 28px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .highlight .hl-num {
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .highlight .hl-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    line-height: 1.45;
+  }
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .stack span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: var(--primary);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    font-weight: 500;
+  }
+
+  /* How I work */
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .principle {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .principle:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+  .principle .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--secondary);
+    margin-bottom: 14px;
+  }
+  .principle h4 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .principle p {
+    font-size: 14.5px;
+    color: var(--secondary);
+    line-height: 1.65;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .skill-group {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .skill-group:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+  .skill-group h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .skill-group ul {
+    list-style: none;
+  }
+  .skill-group li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .skill-group li:last-child { border-bottom: none; }
+  .skill-group li .level {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--secondary);
+    letter-spacing: 0.04em;
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .skill-group li .level.daily { color: var(--accent); }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 16px;
+  }
+  .about-quote {
+    background: var(--primary);
+    color: var(--card);
+    border-radius: var(--radius-lg);
+    padding: 44px 38px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    display: flex;
+    align-items: center;
+    min-height: 240px;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-quote::before {
+    content: "“";
+    position: absolute;
+    top: -24px;
+    left: 18px;
+    font-size: 160px;
+    line-height: 1;
+    font-family: Georgia, serif;
+    opacity: 0.08;
+    color: var(--card);
+  }
+  .about-body {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 38px 36px;
+  }
+  .about-body p {
+    font-size: 15.5px;
+    color: var(--secondary);
+    line-height: 1.75;
+    margin-bottom: 18px;
+  }
+  .about-body p:last-child { margin-bottom: 0; }
+  .about-body strong { color: var(--primary); font-weight: 600; }
+
+  /* Contact */
+  .contact {
+    padding: 80px 0 120px;
+  }
+  .contact-headline {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(48px, 7vw, 92px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.045em;
+    margin-bottom: 56px;
+    max-width: 960px;
+    color: var(--primary);
+  }
+  .contact-headline em {
+    font-style: normal;
+    font-weight: 300;
+    color: var(--secondary);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 720px;
+  }
+  .contact-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 26px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    gap: 12px;
+  }
+  .contact-link:hover {
+    background: var(--primary);
+    color: var(--card);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .contact-link .arrow {
+    opacity: 0.45;
+    transition: all 0.25s ease;
+  }
+  .contact-link:hover .arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--secondary);
+    letter-spacing: 0.04em;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-inner a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-inner a:hover { color: var(--primary); }
+
+  /* Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+  @keyframes reveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .d1 { animation-delay: 0.05s; }
+  .d2 { animation-delay: 0.18s; }
+  .d3 { animation-delay: 0.32s; }
+  .d4 { animation-delay: 0.46s; }
+  .d5 { animation-delay: 0.6s; }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+    .status-dot { animation: none; }
+  }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .principles { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 820px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; align-items: start; }
+    .project { grid-template-columns: 1fr; gap: 16px; padding: 28px 24px; }
+    .skills-grid { grid-template-columns: 1fr; gap: 12px; }
+    .about-grid { grid-template-columns: 1fr; gap: 12px; }
+    .about-quote { padding: 32px 28px; font-size: 22px; min-height: auto; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .nav-links { gap: 18px; }
+    section { padding: 50px 0; }
+  }
+  @media (max-width: 520px) {
+    .container { padding: 0 20px; }
+    .nav-inner { padding: 14px 20px; gap: 12px; }
+    .nav-links { display: none; }
+    .hero { padding: 50px 0 30px; }
+    .highlights { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .section-title { margin-bottom: 40px; }
+    .hero-actions .btn { padding: 11px 16px; font-size: 11px; }
+  }
+
+  /* Print styles */
+  @media print {
+    nav, .scroll-progress, .hero-actions, .contact-grid, footer { display: none; }
+    body { background: #fff; color: #000; }
+    .project, .skill-group, .principle, .about-body, .about-quote, .status-card {
+      box-shadow: none;
+      border-color: #ddd;
+      break-inside: avoid;
+    }
+    .about-quote { background: #fff; color: #000; border: 1px solid #ddd; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav id="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#" class="mark" aria-label="Basit Fayyaz home">basit</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="/resume.pdf" class="nav-cta" download aria-label="Download resume PDF">Resume <span aria-hidden="true">↓</span></a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="eyebrow reveal d1">Software engineer · full-stack · Lahore, Pakistan</div>
+    <h1 class="reveal d2" id="hero-title">Basit <span class="last">Fayyaz</span><span class="dot">.</span></h1>
+    <div class="hero-grid">
+      <div>
+        <p class="hero-bio reveal d3">
+          I build <em>production web apps</em> that have to hold up under real traffic and real ops load — Next.js, TypeScript, Postgres, with a side of real-time, background jobs, and AI integrations done responsibly.
+        </p>
+        <div class="hero-actions reveal d4">
+          <a href="#work" class="btn btn-primary">View work <span class="ico" aria-hidden="true">→</span></a>
+          <a href="/resume.pdf" download class="btn btn-secondary">Download CV <span class="ico" aria-hidden="true">↓</span></a>
+          <a href="mailto:basitfayyaz44@gmail.com" class="btn btn-secondary">Email me <span class="ico" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="status-card reveal d5">
+        <div class="status-row">
+          <span class="label">Status</span>
+          <span class="value"><span class="status-dot" aria-hidden="true"></span>Open to new roles</span>
+        </div>
+        <div class="status-row">
+          <span class="label">Focus</span>
+          <span class="value">Full-stack · TypeScript</span>
+        </div>
+        <div class="status-row">
+          <span class="label">Stack</span>
+          <span class="value">Next.js · Postgres · Tailwind</span>
+        </div>
+        <div class="status-row">
+          <span class="label">Based</span>
+          <span class="value">Lahore, PK · UTC+5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="container" aria-labelledby="work-title">
+    <div class="section-head">
+      <span class="section-dot" aria-hidden="true"></span>
+      <span class="section-num">01 — Selected work</span>
+    </div>
+    <h2 class="section-title" id="work-title">Things I've built and <em>shipped</em>.</h2>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="year">2023 — now</span>
+        Full-stack engineer<br />
+        SEO architecture<br />
+        Deployment
+        <span class="status-pill">Live</span>
+      </div>
+      <div class="project-body">
+        <h3><a href="https://luxurycarhire.club" target="_blank" rel="noopener">LuxuryCarHire.Club <span class="arrow" aria-hidden="true">↗</span></a></h3>
+        <p class="project-role">UK luxury car hire marketplace — zero to a scaled SEO footprint.</p>
+        <p>Designed and built a programmatic-SEO engine covering the UK luxury car hire market end-to-end. Shipped an image SEO pipeline (EXIF/XMP metadata, LCP preloading, alt/title automation), a scoring tool to audit SEO quality, and a Vercel/GitHub deployment workflow that survived multi-thousand-page builds without OOM failures.</p>
+        <div class="highlights">
+          <div class="highlight">
+            <div class="hl-num">1,488</div>
+            <div class="hl-label">Programmatic city-service pages</div>
+          </div>
+          <div class="highlight">
+            <div class="hl-num">Next.js 14</div>
+            <div class="hl-label">App Router + Vercel deploys</div>
+          </div>
+          <div class="highlight">
+            <div class="hl-num">100%</div>
+            <div class="hl-label">Image SEO pipeline coverage</div>
+          </div>
+        </div>
+        <div class="stack" aria-label="Tech stack">
+          <span>Next.js 14</span>
+          <span>Vercel</span>
+          <span>TypeScript</span>
+          <span>Tailwind</span>
+          <span>Programmatic SEO</span>
+          <span>Image pipelines</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="year">2025 — now</span>
+        Full-stack engineer<br />
+        Architecture<br />
+        Product thinking
+        <span class="status-pill">In progress</span>
+      </div>
+      <div class="project-body">
+        <h3><a href="#" aria-label="Roomello (private)">Roomello</a></h3>
+        <p class="project-role">Internal CRM and agent ops platform for Airbnb guest communication teams.</p>
+        <p>Designing and building an operations platform for remote agent teams handling short-term rental guest communications. Centres on the customer record, agent workflow, supervisor monitoring, and a Chrome Extension MV3 for work-environment telemetry. AI reply assist is strictly human-in-loop — no auto-send.</p>
+        <div class="highlights">
+          <div class="highlight">
+            <div class="hl-num">Real-time</div>
+            <div class="hl-label">Pusher-backed agent dashboards</div>
+          </div>
+          <div class="highlight">
+            <div class="hl-num">Multi-channel</div>
+            <div class="hl-label">WhatsApp, SMS &amp; email routing</div>
+          </div>
+          <div class="highlight">
+            <div class="hl-num">MV3</div>
+            <div class="hl-label">Chrome Extension telemetry</div>
+          </div>
+        </div>
+        <div class="stack" aria-label="Tech stack">
+          <span>Next.js 14</span>
+          <span>Neon Postgres</span>
+          <span>Prisma</span>
+          <span>Pusher</span>
+          <span>Inngest</span>
+          <span>Twilio</span>
+          <span>WhatsApp Cloud</span>
+          <span>Claude Haiku</span>
+          <span>Sentry</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-meta">
+        <span class="year">2024 — now</span>
+        Full-stack engineer<br />
+        Local SEO<br />
+        Integrations
+        <span class="status-pill">Live</span>
+      </div>
+      <div class="project-body">
+        <h3><a href="https://peterboroughplumbers.com" target="_blank" rel="noopener">Peterborough Plumbers <span class="arrow" aria-hidden="true">↗</span></a></h3>
+        <p class="project-role">Local services site for a Peterborough plumbing &amp; heating business — built for local intent and fast booking.</p>
+        <p>A production Next.js site covering the full service × area matrix for a local trades business: emergency plumbing, boiler servicing, landlord compliance, and bathroom installations across PE1–PE7 and surrounding towns. Online quote flow, WhatsApp-first lead capture (with photo upload), schema-marked service and area pages, and a guides hub for content-led SEO.</p>
+        <div class="highlights">
+          <div class="highlight">
+            <div class="hl-num">10+</div>
+            <div class="hl-label">Service pages with schema</div>
+          </div>
+          <div class="highlight">
+            <div class="hl-num">PE1–PE7</div>
+            <div class="hl-label">Plus 8 surrounding area pages</div>
+          </div>
+          <div class="highlight">
+            <div class="hl-num">WhatsApp</div>
+            <div class="hl-label">First booking channel</div>
+          </div>
+        </div>
+        <div class="stack" aria-label="Tech stack">
+          <span>Next.js</span>
+          <span>Tailwind</span>
+          <span>Vercel</span>
+          <span>Schema.org</span>
+          <span>WhatsApp Business</span>
+          <span>Local SEO</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="approach" class="container" aria-labelledby="approach-title">
+    <div class="section-head">
+      <span class="section-dot" aria-hidden="true"></span>
+      <span class="section-num">02 — Approach</span>
+    </div>
+    <h2 class="section-title" id="approach-title">A few things I keep <em>coming back to</em>.</h2>
+
+    <div class="principles">
+      <div class="principle">
+        <div class="num">01</div>
+        <h4>Ship the smallest thing that works</h4>
+        <p>Real users in front of working software beats six weeks of architecture astronautics. Build the spine, see what bends, then harden the parts that actually need it.</p>
+      </div>
+      <div class="principle">
+        <div class="num">02</div>
+        <h4>Boring tech, on purpose</h4>
+        <p>Next.js, Postgres, a queue, a job runner, an error tracker. The stack is intentionally unsurprising so the surprises can live in the product, not the infra.</p>
+      </div>
+      <div class="principle">
+        <div class="num">03</div>
+        <h4>Observability before features</h4>
+        <p>Sentry, structured logs, and a way to replay what happened to a real user. If I can't see a bug, I can't fix it — and dashboards beat hunches every time.</p>
+      </div>
+      <div class="principle">
+        <div class="num">04</div>
+        <h4>AI as a teammate, never the autopilot</h4>
+        <p>I lean on Claude for reply drafts, classification, and codegen — but with humans in the loop, clear guardrails, and an audit trail. No silent auto-sends.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="container" aria-labelledby="skills-title">
+    <div class="section-head">
+      <span class="section-dot" aria-hidden="true"></span>
+      <span class="section-num">03 — Skills &amp; stack</span>
+    </div>
+    <h2 class="section-title" id="skills-title">How I <em>actually</em> work.</h2>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Engineering</h4>
+        <ul>
+          <li>Next.js / React <span class="level daily">Daily</span></li>
+          <li>TypeScript <span class="level daily">Daily</span></li>
+          <li>Tailwind CSS <span class="level daily">Daily</span></li>
+          <li>Node.js / Serverless <span class="level">Fluent</span></li>
+          <li>PostgreSQL / Prisma <span class="level">Fluent</span></li>
+          <li>Chrome Extensions (MV3) <span class="level">Working</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Infra &amp; platform</h4>
+        <ul>
+          <li>Vercel <span class="level daily">Daily</span></li>
+          <li>Neon · Supabase <span class="level">Fluent</span></li>
+          <li>Pusher · Inngest <span class="level">Fluent</span></li>
+          <li>Twilio · WhatsApp Cloud <span class="level">Fluent</span></li>
+          <li>Sentry · Resend <span class="level">Fluent</span></li>
+          <li>GitHub Actions / CI <span class="level">Fluent</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h4>Growth &amp; product</h4>
+        <ul>
+          <li>Programmatic SEO <span class="level daily">Daily</span></li>
+          <li>Technical SEO audits <span class="level daily">Daily</span></li>
+          <li>Image SEO pipelines <span class="level">Fluent</span></li>
+          <li>Google Search Console <span class="level">Fluent</span></li>
+          <li>Product design <span class="level">Fluent</span></li>
+          <li>AI integration (Claude) <span class="level">Fluent</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container" aria-labelledby="about-title">
+    <div class="section-head">
+      <span class="section-dot" aria-hidden="true"></span>
+      <span class="section-num">04 — About</span>
+    </div>
+    <h2 class="section-title" id="about-title" style="margin-bottom:32px;">Brief, mostly <em>useful</em>.</h2>
+
+    <div class="about-grid">
+      <div class="about-quote">
+        Ship the smallest thing that actually works. Then make it better.
+      </div>
+      <div class="about-body">
+        <p>I'm a full-stack engineer who's spent the last few years shipping production systems that have to hold up under real traffic and real ops load — <strong>not toy projects</strong>.</p>
+        <p>Most of my work lives in the <strong>Next.js / TypeScript / Postgres</strong> stack, with a side of real-time (Pusher, WebSockets), background workers (Inngest), and third-party integrations (Twilio, WhatsApp Cloud, Stripe, Claude). I care about clean boundaries, observability, and code that other engineers can pick up without a tour guide.</p>
+        <p>Currently open to <strong>new roles or contract engagements</strong> — especially anything involving thoughtful product work, gnarly integrations, or high-leverage infrastructure decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container" aria-labelledby="contact-title">
+    <div class="section-head">
+      <span class="section-dot" aria-hidden="true"></span>
+      <span class="section-num">05 — Contact</span>
+    </div>
+    <h2 class="contact-headline" id="contact-title">Got an interesting engineering problem? I'd <em>love to hear about it</em>.</h2>
+
+    <div class="contact-grid">
+      <a href="mailto:basitfayyaz44@gmail.com" class="contact-link" aria-label="Email Basit">
+        <span>basitfayyaz44@gmail.com</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="/resume.pdf" download class="contact-link" aria-label="Download resume PDF">
+        <span>Download CV (PDF)</span>
+        <span class="arrow" aria-hidden="true">↓</span>
+      </a>
+      <a href="https://twitter.com/basitfayyaz" class="contact-link" target="_blank" rel="noopener" aria-label="Basit on X (Twitter)">
+        <span>@basitfayyaz on X</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://linkedin.com/in/basitfayyaz" class="contact-link" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <span>LinkedIn</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://github.com/basitfayyaz" class="contact-link" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <span>GitHub</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://cal.com/basitfayyaz" class="contact-link" target="_blank" rel="noopener" aria-label="Book a call">
+        <span>Book a 20-min intro call</span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© 2026 Basit Fayyaz · Lahore, PK</span>
+    <span><a href="mailto:basitfayyaz44@gmail.com">basitfayyaz44@gmail.com</a></span>
+    <span>Built with restraint.</span>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav border + scroll progress
+  const nav = document.getElementById('nav');
+  const progress = document.getElementById('scrollProgress');
+  const update = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 20);
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = h > 0 ? (y / h * 100) + '%' : '0%';
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+
+  // Active nav link highlighting via IntersectionObserver
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+  const sections = navLinks
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = '#' + entry.target.id;
+          navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach(s => io.observe(s));
+  }
+</script>
+
+</body>
+</html>
